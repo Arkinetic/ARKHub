@@ -1,7 +1,7 @@
 local thing = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 if game.PlaceId == 3851622790 then -- Break In (Story)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Arkinetic/Ark-Projects/main/ark/lua/break-in.lua"))()
-elseif game.PlaceId == 443406476 then -- Project Lazarus
+else if game.PlaceId == 443406476 then -- Project Lazarus
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Arkinetic/ProjectLazarus/main/source.ark"))()
 end
 else
