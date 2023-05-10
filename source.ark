@@ -1,6 +1,9 @@
 local thing = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-if game.PlaceId == 3851622790 then
+if game.PlaceId == 3851622790 then -- Break In (Story)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Arkinetic/Ark-Projects/main/ark/lua/break-in.lua"))()
+elseif game.PlaceId == 3956818381 then -- Ninja Legends
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Arkinetic/ARXHubNJL/main/arxhub.lua"))()
+end
 else
 thing:MakeNotification({ Name = "ARKHub", Content = "ARKHub does not support this game!", Image = "rbxassetid://4483345998", Time = 5 })
 end
