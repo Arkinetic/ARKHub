@@ -3,7 +3,10 @@ if game.PlaceId == 3851622790 then -- Break In (Story)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Arkinetic/Ark-Projects/main/ark/lua/break-in.lua"))()
 else if game.PlaceId == 443406476 then -- Project Lazarus
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Arkinetic/ProjectLazarus/main/source.ark"))()
+else if game.PlaceId == 3956818381 then -- Ninja Legends
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Arkinetic/ARXHubNJL/main/arxhub.lua"))()
 else
 thing:MakeNotification({ Name = "ARKHub", Content = "ARKHub does not support this game!", Image = "rbxassetid://4483345998", Time = 5 })
+end
 end
 end
