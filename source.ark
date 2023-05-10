@@ -6,3 +6,4 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Arkinetic/ProjectLaza
 else
 thing:MakeNotification({ Name = "ARKHub", Content = "ARKHub does not support this game!", Image = "rbxassetid://4483345998", Time = 5 })
 end
+end
