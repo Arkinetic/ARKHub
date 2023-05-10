@@ -1,4 +1,4 @@
-if game.PlaceId == 5 then
+if game.PlaceId == 189707 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/doors"))()
 else if game.PlaceId == 5 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/doors"))()
