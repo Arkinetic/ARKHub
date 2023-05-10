@@ -1,8 +1,5 @@
 if game.PlaceId == 189707 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/doors"))()
-else if game.PlaceId == 5 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/doors"))()
 else
 lib:MakeNotification({ Name = "ARKHub", Content = "ARKHub does not support this game!", Image = "rbxassetid://4483345998", Time = 5 })
-end
 end
