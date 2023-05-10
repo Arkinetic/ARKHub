@@ -1,5 +1,6 @@
+local thing = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 if game.PlaceId == 3851622790 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Arkinetic/Ark-Projects/main/ark/lua/break-in.lua"))()
 else
-lib:MakeNotification({ Name = "ARKHub", Content = "ARKHub does not support this game!", Image = "rbxassetid://4483345998", Time = 5 })
+thing:MakeNotification({ Name = "ARKHub", Content = "ARKHub does not support this game!", Image = "rbxassetid://4483345998", Time = 5 })
 end
