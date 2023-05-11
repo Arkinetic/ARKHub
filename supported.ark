@@ -7,6 +7,81 @@ else if game.PlaceId == 3956818381 then -- Ninja Legends
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Arkinetic/ARXHubNJL/main/arxhub.lua"))()
 else
 thing:MakeNotification({ Name = "ARKHub", Content = "ARKHub does not support this game!", Image = "rbxassetid://4483345998", Time = 5 })
+LoadEXT()
 end
 end
+end
+
+function LoadEXT()
+local lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local win = lib:MakeWindow({Name = "ARKHub", IntroText="ARKHub", HidePremium = false, SaveConfig = true, ConfigFolder = "ARKHub"})
+
+local tab = win:MakeTab({
+    Name = "Main",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local sec = tab:AddSection({
+    Name = "This game does not support ARKHub"
+})
+
+local tab2 = win:MakeTab({
+    Name = "Player",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local sec2 = tab2:AddSection({
+    Name = "Player"
+})
+
+tab2:AddSlider({
+	Name = "Walkspeed",
+	Min = 16,
+	Max = 100,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Walkspeed",
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+	end    
+})
+
+tab2:AddSlider({
+	Name = "Jumppower",
+	Min = 50,
+	Max = 500,
+	Default = 50,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Jumppower",
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+	end    
+})
+
+tab2:AddButton({
+	Name = "BTools",
+	Callback = function()
+    for i=2,4 do
+    local btool = Instance.new("HopperBin")
+    btool.BinType=i
+    btool.Parent=game:service'Players'.LocalPlayer.Backpack
+    end
+
+    mouse = game:service'Players'.LocalPlayer:GetMouse()
+    tool = Instance.new("Tool")
+    tool.RequiresHandle = false
+    tool.Name = "Unlock tool"
+    tool.Activated:connect(function()
+        if mouse.Target:IsA("BasePart") then
+            mouse.Target.Locked=false
+            print("Unlocked "..mouse.Target:GetFullName())
+        end
+    end)
+    tool.Parent = game:service'Players'.LocalPlayer.Backpack	
+  	end    
+})
 end
